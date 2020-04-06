@@ -22,8 +22,8 @@ namespace COVID19Mobile
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
-            fab.Click += FabOnClick;
+            FloatingActionButton btnLoadData = FindViewById<FloatingActionButton>(Resource.Id.btnLoadData);
+            btnLoadData.Click += BtnLoadDataOnClick;
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -43,7 +43,7 @@ namespace COVID19Mobile
             return base.OnOptionsItemSelected(item);
         }
 
-        private void FabOnClick(object sender, EventArgs eventArgs)
+        private void BtnLoadDataOnClick(object sender, EventArgs eventArgs)
         {
             View view = (View) sender;
             Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
